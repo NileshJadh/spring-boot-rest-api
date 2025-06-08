@@ -23,7 +23,8 @@ public class JobService {
     }
 
     public Optional<JobPost> getJob(int postId) {
-        return Optional.ofNullable(repo.getJob(postId));
+        return Optional.ofNullable(repo.getJob(postId))
+                .or(() -> Optional.of(new JobPost(postId, "null", "null", 0, List.of())));
     }
 
     public void updateJob(JobPost jobPost) {

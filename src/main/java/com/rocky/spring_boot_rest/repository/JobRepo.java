@@ -34,6 +34,14 @@ public class JobRepo {
         return null;
     }
 
+//    public JobPost getJob(int postId) {
+//        return jobs.stream()
+//                .filter(job -> job.getPostId() == postId)
+//                .findFirst()
+//                .orElse(null); // Safely handles empty result
+//    }
+
+
     public void updateJob(JobPost jobPost) {
         for(JobPost jobPost1:jobs){
             if(jobPost1.getPostId()==jobPost.getPostId()){
