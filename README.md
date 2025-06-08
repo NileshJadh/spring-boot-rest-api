@@ -100,10 +100,9 @@ Edit
   "reqExperience": 5,
   "postTechStack": ["Java", "Spring Boot", "Kafka"]
 }
+
+
 🗂️ Project Structure
-css
-Copy
-Edit
 src
 ├── main
 │   ├── java
