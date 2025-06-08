@@ -52,7 +52,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/your-username/job-management-rest-api.git
+git clone https://github.com/NileshJadh/spring-boot-rest-api.git
 cd job-management-rest-api
 Build the project:
 
