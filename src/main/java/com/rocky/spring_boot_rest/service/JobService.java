@@ -6,28 +6,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class JobService {
 
     @Autowired
     private JobRepo repo;
 
-    public void addJob(JobPost jobPost){
+    public void addJob(JobPost jobPost) {
         repo.addJob(jobPost);
     }
 
-    public List<JobPost> getAllJobs(){
-       return repo.getAllJobs();
+    public List<JobPost> getAllJobs() {
+        return repo.getAllJobs();
     }
 
-    public JobPost getJob(int postId) {
-        return repo.getJob(postId);
+    public Optional<JobPost> getJob(int postId) {
+        return Optional.ofNullable(repo.getJob(postId));
     }
 
     public void updateJob(JobPost jobPost) {
-         repo.updateJob(jobPost);
+        repo.updateJob(jobPost);
     }
-    public void deleteJob(int postId){
+
+    public void deleteJob(int postId) {
         repo.deleteJob(postId);
     }
 }
